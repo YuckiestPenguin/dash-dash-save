@@ -16,7 +16,8 @@ export class AppComponent {
   title = 'dash-dash-save';
   isAuthenticated=false;
   currentUser: any;
-
+  isLoggedIn = false;
+  user: { id: string; username: string; email: string; } | undefined;
 
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private authService: AuthService, private router: Router, public location: Location) {
   }
@@ -31,6 +32,14 @@ export class AppComponent {
 
 
   async ngOnInit() {
+    this.authService.isLoggedIn$.subscribe(
+      isLoggedIn => (this.isLoggedIn = isLoggedIn)
+    );
+    this.authService.auth$.subscribe(({ id, username, email }) => {
+      // @ts-ignore
+      this.user = { id, username, email };
+    });
+
     this.isAuthenticated = await this.authService.isAuthenticated()
 
     this.currentUser = await this.authService.isAuthenticated()
