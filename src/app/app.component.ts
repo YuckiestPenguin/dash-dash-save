@@ -5,6 +5,7 @@ import {NewPostDialogComponent} from "./components/new-post-dialog/new-post-dial
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {AuthService} from "./services/auth.service";
 import {Router} from "@angular/router";
+import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -13,10 +14,10 @@ import {Router} from "@angular/router";
 })
 export class AppComponent {
   title = 'dash-dash-save';
-  currentUser:any;
+  currentUser: any;
 
 
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private authService:AuthService, private router: Router ) {
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private authService: AuthService, private router: Router, public location: Location) {
   }
 
   openDialog() {
@@ -40,11 +41,14 @@ export class AppComponent {
     try {
       await Auth.signOut()
       await this.router.navigate(['/login'])
+      this.location.replaceState('/login')
 
     } catch (e) {
 
     }
   }
+
+
 }
 
 
