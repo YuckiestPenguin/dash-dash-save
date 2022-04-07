@@ -12,10 +12,11 @@ export class AuthService {
 
   public async isAuthenticated(): Promise<any> {
     try {
-      return await Auth.currentAuthenticatedUser()
+       await Auth.currentAuthenticatedUser()
+      return true
 
     } catch (e) {
-      throw e
+      return false
     }
 
   }

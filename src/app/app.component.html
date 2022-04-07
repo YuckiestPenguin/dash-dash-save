@@ -3,7 +3,7 @@
     <mat-toolbar-row>
       <span><span>dash dash</span> SAVE</span>
       <span fxFlex></span>
-      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu button">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="menu button" *ngIf="isAuthenticated">
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu">

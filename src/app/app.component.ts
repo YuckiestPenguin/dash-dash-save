@@ -14,6 +14,7 @@ import {Location, LocationStrategy, PathLocationStrategy} from '@angular/common'
 })
 export class AppComponent {
   title = 'dash-dash-save';
+  isAuthenticated=false;
   currentUser: any;
 
 
@@ -30,6 +31,7 @@ export class AppComponent {
 
 
   async ngOnInit() {
+    this.isAuthenticated = await this.authService.isAuthenticated()
 
     this.currentUser = await this.authService.isAuthenticated()
 
