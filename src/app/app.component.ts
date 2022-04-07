@@ -28,8 +28,6 @@ export class AppComponent {
     });
   }
 
-  _auth = Auth;
-
 
   async ngOnInit() {
 
