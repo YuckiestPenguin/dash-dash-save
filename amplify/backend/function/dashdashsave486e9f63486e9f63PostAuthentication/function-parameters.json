@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "dashdashsave486e9f63486e9f63",
+  "functionName": "dashdashsave486e9f63486e9f63PostAuthentication",
+  "resourceName": "dashdashsave486e9f63486e9f63PostAuthentication",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "C:\\snapshot\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PostAuthentication",
+  "triggerTemplate": "PostAuthentication.json.ejs",
+  "triggerEventPath": "PostAuthentication.event.json",
+  "roleName": "dashdashsave486e9f63486e9f63PostAuthentication",
+  "skipEdit": true,
+  "enableCors": false
+}

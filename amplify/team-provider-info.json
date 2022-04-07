@@ -9,11 +9,22 @@
       "UnauthRoleName": "amplify-dashdashsave-dev-210402-unauthRole",
       "StackName": "amplify-dashdashsave-dev-210402",
       "StackId": "arn:aws:cloudformation:us-east-1:353712038361:stack/amplify-dashdashsave-dev-210402/a3d4c370-b60e-11ec-8446-0ac56b30a425",
-      "AmplifyAppId": "d99opvxo62yz5"
+      "AmplifyAppId": "d99opvxo62yz5",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-dashdashsave-dev-210402-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
     },
     "categories": {
       "auth": {
         "dashdashsave486e9f63486e9f63": {}
+      },
+      "function": {
+        "dashdashsave486e9f63486e9f63PostAuthentication": {
+          "deploymentBucketName": "amplify-dashdashsave-dev-210402-deployment",
+          "s3Key": "amplify-builds/dashdashsave486e9f63486e9f63PostAuthentication-6e4c6e50514f50367369-build.zip"
+        },
+        "dashdashsave486e9f63486e9f63PostConfirmation": {
+          "deploymentBucketName": "amplify-dashdashsave-dev-210402-deployment",
+          "s3Key": "amplify-builds/dashdashsave486e9f63486e9f63PostConfirmation-5146307a4f6430587439-build.zip"
+        }
       }
     }
   }

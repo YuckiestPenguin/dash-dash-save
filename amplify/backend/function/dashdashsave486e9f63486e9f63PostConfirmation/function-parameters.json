@@ -1,0 +1,17 @@
+{
+  "trigger": true,
+  "modules": [
+    "custom"
+  ],
+  "parentResource": "dashdashsave486e9f63486e9f63",
+  "functionName": "dashdashsave486e9f63486e9f63PostConfirmation",
+  "resourceName": "dashdashsave486e9f63486e9f63PostConfirmation",
+  "parentStack": "auth",
+  "triggerEnvs": [],
+  "triggerDir": "C:\\snapshot\\node_modules\\@aws-amplify\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\PostConfirmation",
+  "triggerTemplate": "PostConfirmation.json.ejs",
+  "triggerEventPath": "PostConfirmation.event.json",
+  "roleName": "dashdashsave486e9f63486e9f63PostConfirmation",
+  "skipEdit": true,
+  "enableCors": false
+}

@@ -1,11 +1,20 @@
 <div fxLayout="row" fxLayoutAlign="center center">
+  <form
+    autocomplete="off"
+    [formGroup]="loginForm"
+    (ngSubmit)="login(loginForm.value)"
+    fxLayout="column"
+  >
+    <mat-form-field appearance="outline" fxFlex="100">
+      <mat-label>Username</mat-label>
+      <input matInput formControlName="username">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="password" type="password">
+    </mat-form-field>
 
-  <amplify-authenticator initialState="signIn">
-    <ng-template
-      amplifySlot="authenticated"
-      let-user="user"
-      let-signOut="signOut"
-    >
-    </ng-template>
-  </amplify-authenticator>
+    <button mat-raised-button color="primary" type="submit">Login</button>
+  </form>
+
 </div>
