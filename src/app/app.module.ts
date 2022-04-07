@@ -15,11 +15,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
+import {AuthService} from "./services/auth.service";
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewPostDialogComponent
+    NewPostDialogComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
     MatInputModule,
     MatSnackBarModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
