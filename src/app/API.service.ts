@@ -20,6 +20,7 @@ export type CreatePostInput = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
 };
 
@@ -27,6 +28,7 @@ export type ModelPostConditionInput = {
   title?: ModelStringInput | null;
   owner?: ModelStringInput | null;
   url?: ModelStringInput | null;
+  postType?: ModelStringInput | null;
   status?: ModelStringInput | null;
   and?: Array<ModelPostConditionInput | null> | null;
   or?: Array<ModelPostConditionInput | null> | null;
@@ -78,6 +80,7 @@ export type Post = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -88,6 +91,7 @@ export type UpdatePostInput = {
   title?: string | null;
   owner?: string | null;
   url?: string | null;
+  postType?: string | null;
   status?: string | null;
 };
 
@@ -100,6 +104,7 @@ export type ModelPostFilterInput = {
   title?: ModelStringInput | null;
   owner?: ModelStringInput | null;
   url?: ModelStringInput | null;
+  postType?: ModelStringInput | null;
   status?: ModelStringInput | null;
   and?: Array<ModelPostFilterInput | null> | null;
   or?: Array<ModelPostFilterInput | null> | null;
@@ -134,6 +139,7 @@ export type CreatePostMutation = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -145,6 +151,7 @@ export type UpdatePostMutation = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -156,6 +163,7 @@ export type DeletePostMutation = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -167,6 +175,7 @@ export type GetPostQuery = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -180,6 +189,7 @@ export type ListPostsQuery = {
     title: string;
     owner?: string | null;
     url: string;
+    postType?: string | null;
     status?: string | null;
     createdAt: string;
     updatedAt: string;
@@ -193,6 +203,7 @@ export type OnCreatePostSubscription = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -204,6 +215,7 @@ export type OnUpdatePostSubscription = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -215,6 +227,7 @@ export type OnDeletePostSubscription = {
   title: string;
   owner?: string | null;
   url: string;
+  postType?: string | null;
   status?: string | null;
   createdAt: string;
   updatedAt: string;
@@ -235,6 +248,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt
@@ -262,6 +276,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt
@@ -289,6 +304,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt
@@ -313,6 +329,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt
@@ -340,6 +357,7 @@ export class APIService {
             title
             owner
             url
+            postType
             status
             createdAt
             updatedAt
@@ -374,6 +392,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt
@@ -402,6 +421,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt
@@ -430,6 +450,7 @@ export class APIService {
           title
           owner
           url
+          postType
           status
           createdAt
           updatedAt

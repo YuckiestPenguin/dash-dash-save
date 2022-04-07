@@ -12,5 +12,6 @@ type Post
   title: String!
   owner: String
   url: String!
+  postType: String
   status: String
 }

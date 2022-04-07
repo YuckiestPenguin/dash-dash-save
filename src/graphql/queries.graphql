@@ -5,6 +5,7 @@ query GetPost($id: ID!) {
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt
@@ -21,6 +22,7 @@ query ListPosts(
       title
       owner
       url
+      postType
       status
       createdAt
       updatedAt

@@ -5,6 +5,7 @@ subscription OnCreatePost($owner: String) {
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt
@@ -16,6 +17,7 @@ subscription OnUpdatePost($owner: String) {
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt
@@ -27,6 +29,7 @@ subscription OnDeletePost($owner: String) {
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt

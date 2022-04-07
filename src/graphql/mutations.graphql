@@ -8,6 +8,7 @@ mutation CreatePost(
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt
@@ -22,6 +23,7 @@ mutation UpdatePost(
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt
@@ -36,6 +38,7 @@ mutation DeletePost(
     title
     owner
     url
+    postType
     status
     createdAt
     updatedAt
