@@ -1,0 +1,26 @@
+<div>
+  <div class="form-body">
+    <form
+      autocomplete="off"
+      [formGroup]="createForm"
+      (ngSubmit)="onCreate(createForm.value)"
+    >
+      <div fxLayout="column">
+        <mat-form-field appearance="outline">
+          <mat-label>Title</mat-label>
+          <input matInput placeholder="Ex: How to install NodeJS" formControlName="title">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>URL</mat-label>
+          <input matInput placeholder="Ex: https://www.test.com/install-node" formControlName="url">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Post Type</mat-label>
+          <input matInput placeholder="Ex: Blog, Youtube, StackOverflow" formControlName="postType">
+        </mat-form-field>
+      </div>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
