@@ -1,5 +1,5 @@
 <div>
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" *ngIf="currentUser">
     <mat-toolbar-row>
       <span><span>dash dash</span> SAVE</span>
       <span fxFlex></span>
@@ -14,27 +14,6 @@
       </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>
-  <div>
-    <button mat-stroked-button (click)="openDialog()">Add Post</button>
-  </div>
+
   <router-outlet></router-outlet>
-
-</div>
-
-
-<div>
-  <div fxLayout="row" fxLayoutAlign="center center">
-    <amplify-authenticator initialState="signIn">S
-      <ng-template
-        amplifySlot="authenticated"
-        let-user="user"
-        let-signOut="signOut"
-      >
-        <h2>Welcome, {{ user.username }}!</h2>
-        <button (click)="signOut()">Sign Out</button>
-      </ng-template>
-    </amplify-authenticator>
-  </div>
-
-
 </div>

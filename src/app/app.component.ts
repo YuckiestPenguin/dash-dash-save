@@ -4,6 +4,7 @@ import {MatDialog} from '@angular/material/dialog';
 import {NewPostDialogComponent} from "./components/new-post-dialog/new-post-dialog.component";
 import {MatSnackBar} from "@angular/material/snack-bar";
 import {AuthService} from "./services/auth.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,10 @@ import {AuthService} from "./services/auth.service";
 })
 export class AppComponent {
   title = 'dash-dash-save';
-  currentUser: String | undefined;
+  currentUser:any;
 
-  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private authService:AuthService) {
+
+  constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private authService:AuthService, private router: Router ) {
   }
 
   openDialog() {
@@ -29,15 +31,15 @@ export class AppComponent {
 
 
   async ngOnInit() {
-    this._auth.currentUserInfo().then(user => this.currentUser = user.username).catch(error => {
-      this.currentUser = '';
-    })
+
+    this.currentUser = await this.authService.isAuthenticated()
 
   }
 
   async signOut() {
     try {
       await Auth.signOut()
+      await this.router.navigate(['/login'])
 
     } catch (e) {
 

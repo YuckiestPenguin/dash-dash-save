@@ -17,12 +17,14 @@ import {MatInputModule} from "@angular/material/input";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AuthService} from "./services/auth.service";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewPostDialogComponent,
-    DashboardComponent
+    DashboardComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

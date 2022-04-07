@@ -11,7 +11,7 @@ export class AuthService {
 
   public async isAuthenticated(): Promise<any> {
     try {
-      return await Auth.currentSession()
+      return await Auth.currentAuthenticatedUser()
 
     } catch (e) {
       throw e
