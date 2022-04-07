@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "dashdashsave",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authdashdashsave486e9f63486e9f63",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

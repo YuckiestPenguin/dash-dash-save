@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "dashdashsave",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\vinic\\projects\\dash-dash-save\\amplify\\backend\\api\\dashdashsave\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "AMAZON_COGNITO_USER_POOLS",
+      "cognitoUserPoolId": "authdashdashsave486e9f63486e9f63"
+    }
+  }
+}

@@ -1,2 +1,15 @@
-
+<div fxLayout="column" fxFlex="25">
+  <h1>test</h1>
+  <amplify-authenticator>
+    <ng-template
+      amplifySlot="authenticated"
+      let-user="user"
+      let-signOut="signOut"
+    >
+      <h1>Welcome {{ user.username }}!</h1>
+      <button (click)="signOut()">Sign Out</button>
+    </ng-template>
+  </amplify-authenticator>
+</div>
 <router-outlet></router-outlet>
+

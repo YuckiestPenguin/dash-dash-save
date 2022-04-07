@@ -1,0 +1,34 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreatePost($owner: String) {
+  onCreatePost(owner: $owner) {
+    id
+    title
+    owner
+    url
+    status
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdatePost($owner: String) {
+  onUpdatePost(owner: $owner) {
+    id
+    title
+    owner
+    url
+    status
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeletePost($owner: String) {
+  onDeletePost(owner: $owner) {
+    id
+    title
+    owner
+    url
+    status
+    createdAt
+    updatedAt
+  }
+}
