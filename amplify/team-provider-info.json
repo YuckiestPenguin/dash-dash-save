@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-dashdashsave-dev-210402-authRole",
+      "UnauthRoleArn": "arn:aws:iam::353712038361:role/amplify-dashdashsave-dev-210402-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::353712038361:role/amplify-dashdashsave-dev-210402-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-dashdashsave-dev-210402-deployment",
+      "UnauthRoleName": "amplify-dashdashsave-dev-210402-unauthRole",
+      "StackName": "amplify-dashdashsave-dev-210402",
+      "StackId": "arn:aws:cloudformation:us-east-1:353712038361:stack/amplify-dashdashsave-dev-210402/a3d4c370-b60e-11ec-8446-0ac56b30a425",
+      "AmplifyAppId": "d99opvxo62yz5"
+    }
+  }
+}
