@@ -13,6 +13,7 @@ import {Router} from "@angular/router";
 })
 export class LoginPageComponent implements OnInit {
   public loginForm: FormGroup;
+  authenticating = false;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private _snackBar: MatSnackBar, private router: Router) {
 
@@ -28,11 +29,14 @@ export class LoginPageComponent implements OnInit {
   }
 
   async login(loginForm: any) {
+    this.authenticating = true;
     this.authService.login(loginForm).then((res) => {
       this.router.navigate(['/dashboard'])
+      this.authenticating = false;
     }).catch((error) => {
-      console.log(error.message)
-      this._snackBar.open(error.message, 'OK');
+      this.authenticating = false;
+      this.loginForm.reset()
+      this._snackBar.open(error.message, 'OK', {duration: 2000});
     })
   }
 

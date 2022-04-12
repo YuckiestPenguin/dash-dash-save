@@ -12,14 +12,21 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
           <mat-label>URL</mat-label>
-          <input matInput placeholder="Ex: https://www.test.com/install-node" formControlName="url">
+          <input matInput placeholder="Ex: https://www.test.com/install-node" formControlName="url" pattern="https://.*">
         </mat-form-field>
+<!--        <mat-form-field appearance="outline">-->
+<!--          <mat-label>Post Type</mat-label>-->
+<!--          <input matInput placeholder="Ex: Blog, Youtube, StackOverflow" formControlName="postType">-->
+<!--        </mat-form-field>-->
         <mat-form-field appearance="outline">
           <mat-label>Post Type</mat-label>
-          <input matInput placeholder="Ex: Blog, Youtube, StackOverflow" formControlName="postType">
+          <mat-select formControlName="postType">
+            <mat-option  *ngFor="let postType of availablePostTypes.sort()" [value]="postType">{{postType}}</mat-option>
+          </mat-select>
+          <mat-hint align="end">Youtube, Stackoverflow, etc</mat-hint>
         </mat-form-field>
       </div>
-        <button mat-raised-button color="primary" type="submit">Submit</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="!createForm.valid">Submit</button>
     </form>
   </div>
 </div>

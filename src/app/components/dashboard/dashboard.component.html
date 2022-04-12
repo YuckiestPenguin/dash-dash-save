@@ -1,1 +1,15 @@
-<p>dashboard works!</p>
+<div>
+  <button mat-raised-button color="primary" (click)="openDialog()">Add Post</button>
+  <div
+    fxLayout="row wrap"
+    fxLayout.lt-sm="column"
+    fxLayoutGap="8px"
+    fxLayoutAlign="flex-start">
+    <app-post-card *ngFor="let post of posts" [post]="post" fxFlex="0 1 calc(33.3% - 32px)"
+                   fxFlex.lt-md="0 1 calc(50% - 32px)"
+                   fxFlex.lt-sm="100%">
+
+    </app-post-card>
+
+  </div>
+</div>

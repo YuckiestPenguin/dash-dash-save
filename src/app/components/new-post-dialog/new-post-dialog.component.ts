@@ -11,6 +11,9 @@ export class NewPostDialogComponent implements OnInit {
   public createForm: FormGroup;
   onSubmitEmitter = new EventEmitter();
 
+  availablePostTypes: string[] = ['YouTube', 'Medium', 'StackOverflow', 'Blog', 'Other'];
+  emailRegex = '(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?';
+
   constructor(private api: APIService, private fb: FormBuilder) {
     this.createForm = this.fb.group({
       title: [null, Validators.required],

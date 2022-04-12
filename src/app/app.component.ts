@@ -22,14 +22,6 @@ export class AppComponent {
   constructor(public dialog: MatDialog, private _snackBar: MatSnackBar, private authService: AuthService, private router: Router, public location: Location) {
   }
 
-  openDialog() {
-    const ref = this.dialog.open(NewPostDialogComponent);
-    ref.componentInstance.onSubmitEmitter.subscribe((res) => {
-      this._snackBar.open('New Post Added!', 'Ok');
-      ref.close()
-    });
-  }
-
 
   async ngOnInit() {
     this.authService.isLoggedIn$.subscribe(

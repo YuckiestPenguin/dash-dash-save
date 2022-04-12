@@ -18,13 +18,19 @@ import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {AuthService} from "./services/auth.service";
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
+import {MatSelectModule} from "@angular/material/select";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatDividerModule} from "@angular/material/divider";
+import { PostCardComponent } from './components/post-card/post-card.component';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
     AppComponent,
     NewPostDialogComponent,
     DashboardComponent,
-    LoginPageComponent
+    LoginPageComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,11 @@ import { LoginPageComponent } from './components/login-page/login-page.component
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatSelectModule,
+    MatProgressBarModule,
+    MatDividerModule,
+    MatCardModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
